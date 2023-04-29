@@ -1,0 +1,28 @@
+.section-padding {
+  padding: 0 2rem;
+
+  @include respond("tab-port") {
+    padding: 0;
+  }
+}
+
+.container-padding {
+  padding: 2.5rem 0;
+}
+//============
+// Page - Home
+//============
+
+.fixed_Nav {
+  grid-row: 1 / 2;
+  grid-column: center-start / center-end;
+
+  background-color: var(--color-blue-1); 
+  min-height: 94px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}

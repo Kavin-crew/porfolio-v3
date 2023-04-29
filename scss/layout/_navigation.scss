@@ -1,0 +1,51 @@
+//============
+// Navigation
+//============
+
+.section-nav {
+  @extend .section-padding;
+}
+
+.nav {
+  & > ul {
+    display: flex;
+    padding-left: 50%;
+    justify-content: space-between;
+  }
+
+  &__list {
+  }
+
+  &__link:link {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    font-weight: 500;
+    line-height: 94px;
+    position: relative;
+  }
+
+  &__link::after,
+  &__link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 2px;
+    background: var(--color-blue-3);
+    -webkit-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+  }
+
+  &__link:hover::after,
+  &__link.active::after {
+    width: 100%;
+  }
+
+  &__list::before {
+    content: "";
+    position: absolute;
+  }
+}
