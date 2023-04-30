@@ -2,9 +2,11 @@
 .banner {
   grid-column: full-start / full-end;
   grid-row: 2 / 3;
+  background-color: var(--color-white);
+  overflow: hidden;
+
   position: relative;
   z-index: 0;
-  overflow: hidden;
 
   &__video {
     display: block;
@@ -23,21 +25,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2.5rem;
+
+
   }
 
   &__hero {
     position: relative;
     width: 48%;
-    min-height: 100vh;
+    min-height: 824px;
+    height: 100%;
+
+    pointer-events: none;
   }
 
-  &__hero {
-  }
   &__info {
     position: absolute;
     top: 220px;
     right: 0;
     z-index: 5;
+    pointer-events: all;
 
     animation-duration: 1500ms !important;
     animation-delay: 750ms;
@@ -81,11 +88,15 @@
     max-width: 70%;
     background-color: #e6dffde3;
     padding: 4rem 2rem;
-    border-radius: 3rem;
+    border-radius: 1rem;
     z-index: 4;
 
     animation-duration: 1500ms !important;
     animation-delay: 500ms;
+
+    @include respond("1800"){
+      right: 0;
+    }
   }
   &__img2 {
     top: 10%;
@@ -108,14 +119,12 @@
   }
   &__box1 {
     width: 100%;
-    min-height: 500px;
     display: block;
     background-color: var(--color-purple-3);
+    top: 51.1%;
+    min-height: 353px;
+    left: -40px;
     opacity: 0.5;
-    bottom: 0;
-    min-height: 474px;
-    left: -170px;
-    border-radius: 4rem 4rem 4rem 64rem;
   }
   &__box2 {
     background-color: var(--color-purple-1);
@@ -146,18 +155,18 @@
   &__paragraph {
   }
 
-  &::before {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-white);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    opacity: 0.85;
-  }
+  // &::before {
+  //   content: "";
+  //   pointer-events: none;
+  //   position: absolute;
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: var(--color-white);
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   opacity: 0.85;
+  // }
 }

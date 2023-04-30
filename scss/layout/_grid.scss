@@ -4,7 +4,7 @@
 
 .layout_container {
     display: grid;
-    grid-template-rows: 94px calc(100vh - 94px);
+    grid-template-rows: 94px 825px 100vh;
     // minmax(749px, max-content) minmax(864px, max-content) min-content
     grid-template-columns: [full-start] minmax(25px, 1fr) [center-start] repeat(12, minmax(min-content, 114.5833px)) [center-end] minmax(25px, 1fr) [full-end];
   }

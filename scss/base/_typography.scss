@@ -2,4 +2,77 @@
 // Typography
 //============
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+/* 
+--WHITESPACE
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
+--TYPOGRAPHY
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+h1 4.4
+h2 3.6
+h3 3
+
+subheading   2.4
+default text 1.8
+
+font-weight: 400
+Medium:      500
+Semi-Bold:   600
+Bold:        700
+
+--SHADOWS
+box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+
+box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+--BORDER RADIUS
+9px
+11px
+*/ 
+
+.primary-heading {
+    font-size: 6rem;
+    font-family: var(--font-secondary);
+    line-height: 100%;
+    font-weight: bold;
+    color: var(--colorGreen-1);
+    margin-bottom: 2.4rem;
+    text-transform: uppercase;
+  }
+  .primary-heading-small {
+    display: block;
+    font-family: var(--font-primary);
+    font-weight: normal;
+    color: var(--color-primary);
+    font-size: 2rem;
+    line-height: 100%;
+    margin-bottom: 1.3rem;
+    text-transform: initial;
+  }
+  .primary-heading-span {
+    display: block;
+    font-size: 4.5rem;
+    line-height: 100%;
+    color: var(--color-primary);
+  }
+  
+  .secondary-heading {
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .secondary-heading-small {
+    display: block;
+    font-size: 2rem;
+    line-height: 100%;
+    text-transform: initial;
+    font-weight: var(--default-font-weight);
+    margin-bottom: 5px;
+    color: var(--color-white);
+  }
+  .secondary-heading-span {
+  }
