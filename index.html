@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kavin Abregana</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.min.css" />
     <link rel="shortcut icon" href="images/fav-icon.png" type="image/x-icon" />
@@ -32,16 +36,16 @@
           <div class="wrapper">
             <nav class="nav">
               <ul class="nav__list">
-                <li class="nav__list_item">
-                  <a class="nav__link active" href="javascript:;">Home</a>
+                <li class="nav__list_item nav__list_item--1 active">
+                  <a class="nav__link" href="javascript:;">Home</a>
                 </li>
-                <li class="nav__list_item">
+                <li class="nav__list_item nav__list_item--2">
                   <a class="nav__link" href="javascript:;">About Me</a>
                 </li>
-                <li class="nav__list_item">
+                <li class="nav__list_item nav__list_item--3">
                   <a class="nav__link" href="javascript:;">My Works</a>
                 </li>
-                <li class="nav__list_item">
+                <li class="nav__list_item nav__list_item--4">
                   <a class="nav__link" href="javascript:;">Blog</a>
                 </li>
               </ul>
@@ -51,41 +55,68 @@
       </div>
       <!-- for fixed_Nav -->
 
-      <section class="banner">
-        <!-- <video class="banner__video" autoplay loop muted playsinline>
-          <source
-            src="video/coverr-scrolling.mp4"
-            type="video/mp4"
-            class="banner__video"
-          />
-          Your browser does not support the video tag.
-        </video> -->
-
-        <div class="wrapper">
-          <div class="banner__container">
-            <div class="banner__content">
-              <h1 class="banner__heading">
-                Turning passion
-                <span class="banner__heading_span">into profession</span>
-              </h1>
-
-              <p class="banner__paragraph">
-                Aspiring Front End Developer based out of Cebu
-              </p>
-
+      <!-- for dual slider -->
+      <div class="slider-container">
+        <div class="left_slide">
+          <!-- blog -->
+          <aside class="left_slide__content left_slide__content--1">
+            <div class="left_slide--contact">
+              <h2 class="primary-heading">Blog Section</h2>
+              <p>Upcoming content for future blogs.</p>
               <a href="javascript:;" class="buttons"
-                >Find Out More <span>&rarr;</span></a
+                >Read More <span>&rarr;</span></a
               >
             </div>
+          </aside>
 
-            <div class="banner__hero animatedParent animateOnce">
-              <div class="banner__info animated zoomIn">
-                <h2 class="banner__subheading">
+          <!-- my works -->
+          <aside class="left_slide__content left_slide__content--2">
+            <h2 class="primary-heading">My Works</h2>
+            <p>Converted website from given design to deployment.</p>
+            <a href="javascript:;" class="buttons"
+              >Read More <span>&rarr;</span></a
+            >
+          </aside>
+
+          <!-- About me -->
+          <aside class="left_slide__content left_slide__content--3">
+            <h2 class="primary-heading">About Me</h2>
+            <p class="banner__paragraph">
+              dummy content for the meantime, thank you for visiting the site.
+            </p>
+            <a href="javascript:;" class="buttons"
+              >Find Out More <span>&rarr;</span></a
+            >
+          </aside>
+
+          <!-- home -->
+          <aside class="left_slide__content left_slide__content--4">
+            <h1 class="primary-heading">
+              Turning passion <span>into profession</span>
+            </h1>
+            <p class="banner__paragraph">
+              Aspiring Front End Developer based out of Cebu
+            </p>
+            <a href="javascript:;" class="buttons"
+              >Find Out More <span>&rarr;</span></a
+            >
+          </aside>
+        </div>
+
+        <div class="right_slide">
+          <!-- home -->
+          <article
+            id="home"
+            class="right_slide__content right_slide__content--1 active"
+          >
+            <div class="banner__hero">
+              <div class="banner__info">
+                <h2 class="secondary-heading">
                   Kavin <small>Front-end Developer</small>
                 </h2>
               </div>
 
-              <div class="banner__images banner__img1 animated fadeInRight">
+              <div class="banner__images banner__img1">
                 <figure class="banner__figure">
                   <img
                     class="banner__img"
@@ -94,7 +125,7 @@
                   />
                 </figure>
               </div>
-              <div class="banner__images banner__img2 animated fadeInLeft">
+              <div class="banner__images banner__img2">
                 <figure class="banner__figure">
                   <img
                     class="banner__img"
@@ -103,7 +134,7 @@
                   />
                 </figure>
               </div>
-              <div class="banner__images banner__img3 animated fadeInUp">
+              <div class="banner__images banner__img3">
                 <figure class="banner__figure">
                   <img
                     class="banner__img banner__main"
@@ -115,48 +146,203 @@
               <div class="banner__images banner__box1"></div>
               <div class="banner__images banner__box2"></div>
             </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section class="main">
-        <div class="wrapper">
-          <div class="main__container">
-            <main class="main__content">
-              <!-- Main Content -->
-            </main>
-          </div>
-        </div>
-      </section>
+          <!-- about -->
+          <article id="about" class="about right_slide__content right_slide__content--2" >
 
-      <footer class="footer">
-        <!-- <section class="footer__contact">
-          <div class="wrapper">
-            <div class="footer__container">Footer Area</div>
-          </div>
-        </section>
+            <div class="about__container">
+              <div class="about__images">
+                <figure class="about__images--1"><img src="images/hi-icon.png" alt="hi icon"> </figure>
+                <figure class="about__images--2"><img src="images/kavinabregana-2.png" alt="image of kavin"> </figure>
+              </div>
 
-        <section class="footer__navigation">
-          <div class="wrapper">
-            <div class="footer__nav_container">
-              <nav class="footer__nav">
-                <ul class="footer__nav_list">
-                  <li><a href="javascript:;" class="active">Home</a></li>
-                  <li><a href="javascript:;">About Me</a></li>
-                  <li><a href="javascript:;">My Works</a></li>
-                  <li><a href="javascript:;">Blog</a></li>
-                </ul>
-              </nav>
+              <div class="about__content">
+                <h3 class="tertiary-heading">I'm Kavin</h3>
+
+                <p class="about__paragraph">
+                  These materials are simply being used for exhibition. Soon, there will be actual content posted. These materials are simply being used for exhibition. Soon, there will be actual content posted.
+                </p>
+              </div>
+
+              <div class="about__additional_info">
+
+                <h3 class="tertiary-heading">Skills</h3>
+                <p class="paragraph">
+                  These materials are simply being used for exhibition. Soon, there will be actual content posted. These materials are simply being used for exhibition. Soon, there will be actual content posted.
+                </p>
+              </div>
+
+              <ul class="about__list">
+                <li class="about__item">HTML</li>
+                <li class="about__item">CSS</li>
+                <li class="about__item">SASS</li>
+                <li class="about__item">PHP</li>
+                <li class="about__item">jQuery</li>
+                <li class="about__item">Javascript</li>
+                <li class="about__item">WordPress</li>
+                <li class="about__item">And extending my skill set going forward</li>
+              </ul>
             </div>
-          </div>
-        </section> -->
-      </footer>
+
+
+          </article>
+          <article id="my-work" class="right_slide__content right_slide__content--3" >
+
+            <aside class="work">
+              <div class="work__container">
+
+                <div class="work__section work__section--box1">
+                  <div class="work__heading">
+                    <h3 class="tertiary-heading"> Dummy Website </h3>
+                  </div>
+                  <div class="work__image">
+                    <figure class="work__figure">
+                      <img class="work__img" src="images/dummywebsite.jpg.png" alt="sample dummy website">
+                    </figure>
+                  </div>
+                  <div class="work__information">
+                    <ul class="work__list">
+                      <li class="work__item"><strong>WooCommerce</strong></li>
+                      <li class="work__item">Sample Description</li>
+                      <li class="work__item">Sample Description</li>
+                      <li class="work__item">Sample Description</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="work__section work__section--box2">
+                  <div class="work__heading">
+                    <h3 class="tertiary-heading"> Dummy Website </h3>
+                  </div>
+                  <div class="work__image">
+                    <figure class="work__figure">
+                      <img class="work__img" src="images/dummywebsite.jpg.png" alt="sample dummy website">
+                    </figure>
+                  </div>
+                  <div class="work__information">
+                    <ul class="work__list">
+                      <li class="work__item"><strong>WordPress Elementor</strong></li>
+                      <li class="work__item">Sample Description</li>
+                      <li class="work__item">Sample Description</li>
+                      <li class="work__item">Sample Description</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="work__section work__section--box3">
+                  <div class="work__heading">
+                    <h3 class="tertiary-heading"> Dummy Website </h3>
+                  </div>
+                  <div class="work__image">
+                    <figure class="work__figure">
+                      <img class="work__img" src="images/dummywebsite.jpg.png" alt="sample dummy website">
+                    </figure>
+                  </div>
+                  <div class="work__information">
+                    <ul class="work__list">
+                      <li class="work__item"><strong>WordPress Divi</strong></li>
+                      <li class="work__item">Sample Description</li>
+                      <li class="work__item">Sample Description</li>
+                      <li class="work__item">Sample Description</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </aside>
+
+          </article>
+
+          <!-- blog -->
+          <article
+            id="blog"
+            class="right_slide__content right_slide__content--4"
+          >
+            <div class="right_slide__video">
+              <video class="banner__video" autoplay loop muted playsinline>
+                <source
+                  src="video/coverr-scrolling.mp4"
+                  type="video/mp4"
+                  class="banner__video"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <aside class="blog">
+              <h2 class="tertiary-heading">From Our Blogs</h2>
+
+              <div class="blog__container">
+                <div class="blog__section">
+                  <div class="blog__summary">
+                    <div class="blog__date">
+                      <span class="blog__month"
+                        >JUN <small class="blog__day">01</small></span
+                      >
+                    </div>
+
+                    <div class="blog__content">
+                      <h2 class="blog__heading">
+                        Why we need to keep updated in technology trends today.
+                      </h2>
+                      <p class="blog__paragraph">
+                        Come and explore with me on how important to keep tabs
+                        on new trends in today's technology.
+                        <a class="blog__link" href="javascript:;"
+                          >Ready More &rarr;</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog__section">
+                  <div class="blog__summary">
+                    <div class="blog__date">
+                      <span class="blog__month"
+                        >JUL <small class="blog__day">10</small></span
+                      >
+                    </div>
+
+                    <div class="blog__content">
+                      <h2 class="blog__heading">
+                        Learning while working? Come join me and explore things in web.
+                      </h2>
+                      <p class="blog__paragraph">
+                        Come and explore with me on how important to keep tabs
+                        on new trends in today's technology.
+                        <a class="blog__link" href="javascript:;"
+                          >Ready More &rarr;</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="javascript:;" class="buttons">View All Blog Posts <span>→</span></a>
+
+            </aside>
+          </article>
+        </div>
+        <div class="action_buttons">
+          <button class="action_buttons--down_button">
+            <i class="action_buttons__icon fas fa-arrow-down"></i>
+          </button>
+          <button class="action_buttons--up_button">
+            <i class="action_buttons__icon fas fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+      <!-- for dual slider -->
     </div>
     <!-- layout container -->
 
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/jquery-migrate-1.4.1.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/main.min.js"></script>
     <!--
     Solved Psuedo Elements IE Issues
     -->

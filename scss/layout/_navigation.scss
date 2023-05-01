@@ -13,7 +13,8 @@
     justify-content: space-between;
   }
 
-  &__list {
+  &__list_item {
+    position: relative;
   }
 
   &__link:link {
@@ -24,11 +25,11 @@
     position: relative;
   }
 
-  &__link::after,
-  &__link.active::after {
+  &__list_item::after,
+  &__list_item.active::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: 30px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -39,8 +40,8 @@
     transition: width 0.3s linear;
   }
 
-  &__link:hover::after,
-  &__link.active::after {
+  &__list_item:hover::after,
+  &__list_item.active::after {
     width: 100%;
   }
 

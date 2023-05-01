@@ -4,7 +4,7 @@
 
 .fixed_Nav {
   grid-row: 1 / 2;
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
 
   background-color: var(--color-blue-1); 
   min-height: 94px;
