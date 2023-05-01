@@ -373,21 +373,21 @@
     display: flex;
     align-items: center;
     padding-left: 3rem;
-    transition: min-height 0.3s ease-in-out;
+    transition: min-height 0.3s linear;
   }
 
   &__image {
     position: relative;
     height: 15rem;
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    transition: height 0.3s linear;
   }
   &__figure {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    transition: top 2s ease-in-out;
+    transition: top 2s linear;
   }
   &__img {
   }

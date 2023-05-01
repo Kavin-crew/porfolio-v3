@@ -1138,18 +1138,18 @@ box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     padding-left: 3rem;
-    transition: min-height 0.3s ease-in-out; }
+    transition: min-height 0.3s linear; }
   .work__image {
     position: relative;
     height: 15rem;
     overflow: hidden;
-    transition: height 0.3s ease-in-out; }
+    transition: height 0.3s linear; }
   .work__figure {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    transition: top 2s ease-in-out; }
+    transition: top 2s linear; }
   .work__list {
     position: relative; }
   .work__item {
