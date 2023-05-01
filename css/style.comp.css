@@ -966,10 +966,18 @@ box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px; }
 
+.action_buttons--down_button::before {
+  content: "\f063";
+  font-family: fontAwesome; }
+
 .action_buttons--up_button {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px; }
+
+.action_buttons--up_button::before {
+  content: "\f062";
+  font-family: fontAwesome; }
 
 .blog {
   width: 100%;

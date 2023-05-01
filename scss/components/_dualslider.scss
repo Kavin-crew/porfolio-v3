@@ -137,10 +137,20 @@
     border-bottom-left-radius: 5px;
   }
 
+  &--down_button::before {
+    content: "\f063";
+    font-family: fontAwesome;
+  }
+
   &--up_button {
     transform: translateY(-100%);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+
+  &--up_button::before {
+    content: "\f062";
+    font-family: fontAwesome;
   }
 }
 
