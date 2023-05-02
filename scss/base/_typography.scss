@@ -33,11 +33,17 @@ box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
 */
 
 .primary-heading {
-  font-size: 4.4rem;
+  font-size: 3.6rem;
   line-height: 100%;
   font-weight: bold;
   color: var(--color-white);
   margin-bottom: 2rem;
+
+  @include respond("1024") {
+    font-size: 5rem;
+    color: var(--color-blue-1);
+    text-align: center;
+  }
 }
 .primary-heading-small {
   display: block;
@@ -53,12 +59,20 @@ box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
   display: block;
   line-height: 100%;
   margin: 0.5rem 0;
+  @include respond("1024") {
+    display: inline-block;
+  }
+
 }
 
 .tertiary-heading {
   font-size: 3rem;
   font-weight: bold;
   line-height: 100%;
+  @include respond("1024") {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .secondary-heading {

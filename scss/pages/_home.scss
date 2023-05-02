@@ -6,7 +6,7 @@
   grid-row: 1 / 2;
   grid-column: full-start / full-end;
 
-  background-color: var(--color-blue-1); 
+  background-color: var(--color-blue-1);
   min-height: 94px;
 
   position: fixed;
@@ -14,4 +14,8 @@
   left: 0;
   right: 0;
   z-index: 9999;
+
+  @include respond("1024") {
+    position: static;
+  }
 }

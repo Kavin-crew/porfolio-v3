@@ -2,16 +2,31 @@
 // Main Area
 //============
 
+.main-section {
+  @extend .section-padding;
+  @extend .section-display-none;
+  @include respond("1024") {
+    grid-row: 3 / 4;
+    grid-column: full-start / full-end;
+    padding: 10rem 0;
+  }
+}
+
 .main {
-  grid-column: center-start / center-end;
-  grid-row: 3 / 4;
-  min-height: 100vh;
-
-
   &__container {
-
   }
   &__content {
+    @include respond("1024") {
+      text-align: center;
+      padding: 10rem 0;
+      background: var(--color-blue-2);
+      margin-top: 10rem;
+    }
+  }
 
+  & .primary-heading {
+    @include respond("1024") {
+      color: var(--color-white);
+    }
   }
 }

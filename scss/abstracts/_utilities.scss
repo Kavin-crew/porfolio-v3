@@ -1,12 +1,26 @@
-.pseudo::before,
-.pseudo::after {
-  @include respond("1000") {
-    display: none !important;
-  }
-}
 
+// extends
 .section-padding {
   padding: 0 2.5rem;
+}
+
+.section-display-none{
+
+  display: none;
+  visibility: hidden;
+
+  @include respond("1024") {
+    display: block;
+    visibility: visible;
+  }
+}
+// extends
+
+.pseudo::before,
+.pseudo::after {
+  @include respond("1024") {
+    display: none !important;
+  }
 }
 
 .container-padding {
@@ -14,7 +28,7 @@
 }
 
 .u-none {
-  @include respond("1000") {
+  @include respond("1024") {
     display: none !important;
   }
 }

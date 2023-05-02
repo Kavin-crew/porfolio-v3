@@ -1,4 +1,15 @@
 // banner area
+.banner-section {
+  @extend .section-display-none;
+  @include respond("1024") {
+    grid-row: 2 / 3;
+    grid-column: full-start / full-end;
+
+    padding: 10rem 0;
+    background: var(--color-purple-1);
+  }
+}
+
 .banner {
   // grid-column: full-start / full-end;
   // grid-row: 2 / 3;
@@ -23,12 +34,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 2.5rem;
+    @include respond("1024") {
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
   }
 
   &__hero {
     min-height: 100%;
     position: relative;
     width: 100%;
+
+    @include respond("1024") {
+      max-width: 100%;
+      display: block;
+      overflow: hidden;
+      width: 100%;
+    }
   }
 
   &__info {
@@ -41,11 +64,31 @@
     top: 41%;
     right: 0;
     z-index: 5;
+
+    @include respond("1400") {
+      top: 36%;
+      right: -21px;
+    }
+    @include respond("1024") {
+      position: static;
+      display: none;
+      width: 100%;
+    }
+  }
+
+  &__information {
+    @include respond("1024") {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__images {
     position: absolute;
     pointer-events: none;
+    @include respond("1024") {
+      position: static;
+    }
   }
 
   &__main {
@@ -72,8 +115,13 @@
     animation-duration: 1500ms !important;
     animation-delay: 500ms;
 
-    @include respond("1800"){
+    @include respond("1800") {
       right: 0;
+    }
+
+    @include respond("1400") {
+      width: 47%;
+      right: 2rem;
     }
   }
   &__img2 {
@@ -86,6 +134,11 @@
 
     animation-duration: 1500ms !important;
     animation-delay: 500ms;
+
+    @include respond("1400") {
+      max-width: 40%;
+      width: 50%;
+    }
   }
   &__img3 {
     width: 50%;
@@ -96,6 +149,14 @@
     z-index: 3;
 
     animation-duration: 1500ms !important;
+
+    @include respond("1400") {
+      width: 70%;
+    }
+
+    @include respond("1024") {
+      width: 100%;
+    }
   }
   &__box1 {
     width: 100%;
@@ -113,12 +174,24 @@
     right: 40px;
     top: 38%;
     z-index: 0;
+
+    @include respond("1400") {
+      right: 0;
+      top: 32%;
+    }
   }
 
   &__content {
-    width: 48%;
+    .primary-heading {
+      @include respond("1024") {
+        color: var(--color-white);
+      }
+    }
   }
 
+  &__paragraph {
+    color: var(--color-white);
+  }
 
   // &::before {
   //   content: "";

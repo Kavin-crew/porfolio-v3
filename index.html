@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kavin Abregana</title>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.min.css" />
     <link rel="shortcut icon" href="images/fav-icon.png" type="image/x-icon" />
@@ -34,16 +34,40 @@
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__list_item nav__list_item--1 active">
-                  <a class="nav__link" href="javascript:;">Home</a>
+                  <a class="nav__link" href="javascript:;">
+                    <svg class="nav__icon">
+                      <use xlink:href="images/icons/sprite.svg#icon-home"></use>
+                    </svg>
+                    Home</a
+                  >
                 </li>
                 <li class="nav__list_item nav__list_item--2">
-                  <a class="nav__link" href="javascript:;">About Me</a>
+                  <a class="nav__link" href="javascript:;">
+                    <svg class="nav__icon">
+                      <use xlink:href="images/icons/sprite.svg#icon-user"></use>
+                    </svg>
+                    About Me</a
+                  >
                 </li>
                 <li class="nav__list_item nav__list_item--3">
-                  <a class="nav__link" href="javascript:;">My Works</a>
+                  <a class="nav__link" href="javascript:;">
+                    <svg class="nav__icon">
+                      <use
+                        xlink:href="images/icons/sprite.svg#icon-folder"
+                      ></use>
+                    </svg>
+                    My Works</a
+                  >
                 </li>
                 <li class="nav__list_item nav__list_item--4">
-                  <a class="nav__link" href="javascript:;">Blog</a>
+                  <a class="nav__link" href="javascript:;">
+                    <svg class="nav__icon">
+                      <use
+                        xlink:href="images/icons/sprite.svg#icon-message "
+                      ></use>
+                    </svg>
+                    Blog</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -53,60 +77,75 @@
       <!-- for fixed_Nav -->
 
       <!-- for dual slider -->
-      <div class="slider-container">
+      <article class="slider-container u-none">
         <div class="left_slide">
           <!-- blog -->
           <aside class="left_slide__content left_slide__content--1">
             <div class="left_slide--contact">
-              <h2 class="primary-heading">Blog Section</h2>
-              <p>Upcoming content for future blogs.</p>
-              <a href="javascript:;" class="buttons"
-                >Read More <span>&rarr;</span></a
-              >
+              <!-- for swapping to bottom -->
+              <div class="bottom-swapping-desktop"></div>
+              <div class="bottom__content">
+                <h2 class="primary-heading">Blog Section</h2>
+                <p>Upcoming content for future blogs.</p>
+                <a href="javascript:;" class="buttons"
+                  >Read More <span>&rarr;</span></a
+                >
+              </div>
+              <!-- for swapping to bottom -->
             </div>
           </aside>
 
           <!-- my works -->
           <aside class="left_slide__content left_slide__content--2">
-            <h2 class="primary-heading">My Works</h2>
-            <p>Converted website from given design to deployment.</p>
-            <a href="javascript:;" class="buttons"
-              >Read More <span>&rarr;</span></a
-            >
+            <!-- for swappig to middle -->
+            <div class="middle-swapping-desktop"></div>
+            <div class="middle__content">
+              <h2 class="primary-heading">My Works</h2>
+              <p>Converted website from given design to deployment.</p>
+              <a href="javascript:;" class="buttons"
+                >Read More <span>&rarr;</span></a
+              >
+            </div>
+            <!-- for swappig to middle -->
           </aside>
 
           <!-- About me -->
           <aside class="left_slide__content left_slide__content--3">
-            <h2 class="primary-heading">About Me</h2>
-            <p class="banner__paragraph">
-              dummy content for the meantime, thank you for visiting the site.
-            </p>
-            <a href="javascript:;" class="buttons"
-              >Find Out More <span>&rarr;</span></a
-            >
+            <!-- for swapping to main -->
+            <div class="main-swapping-desktop"></div>
+            <div class="main__content">
+              <h1 class="primary-heading">About Me</h1>
+              <p class="banner__paragraph">
+                dummy content for the meantime, thank you for visiting the site.
+              </p>
+              <a href="javascript:;" class="buttons"
+                >Find Out More <span>&rarr;</span></a
+              >
+            </div>
+            <!-- for swapping to main -->
           </aside>
 
           <!-- home -->
           <aside class="left_slide__content left_slide__content--4">
-            <h1 class="primary-heading">
-              Turning passion <span>into profession</span>
-            </h1>
-            <p class="banner__paragraph">
-              Aspiring Front End Developer based out of Cebu
-            </p>
-            <a href="javascript:;" class="buttons"
-              >Find Out More <span>&rarr;</span></a
-            >
+            <!-- for swapping to banner -->
+            <div class="banner-swapping-desktop"></div>
+            <div class="banner__content">
+              <h2 class="primary-heading">
+                Turning passion <span>into profession</span>
+              </h2>
+              <p class="banner__paragraph">
+                Aspiring Front End Developer based out of Cebu
+              </p>
+              <a href="javascript:;" class="buttons" >Find Out More <span>&rarr;</span></a >
+            </div>
+            <!-- for swapping to banner -->
           </aside>
         </div>
 
         <div class="right_slide">
           <!-- home -->
-          <article
-            id="home"
-            class="right_slide__content right_slide__content--1 active"
-          >
-            <div class="banner__hero">
+          <article id="home" class="right_slide__content right_slide__content--1 active" >
+            <div class="banner__hero u-none">
               <div class="banner__info">
                 <h2 class="secondary-heading">
                   Kavin <small>Front-end Developer</small>
@@ -147,26 +186,34 @@
 
           <!-- about -->
           <article id="about" class="about right_slide__content right_slide__content--2" >
-
             <div class="about__container">
               <div class="about__images">
-                <figure class="about__images--1"><img src="images/hi-icon.png" alt="hi icon"> </figure>
-                <figure class="about__images--2"><img src="images/kavinabregana-2.png" alt="image of kavin"> </figure>
+                <figure class="about__images--1">
+                  <img src="images/hi-icon.png" alt="hi icon" />
+                </figure>
+                <figure class="about__images--2">
+                  <img src="images/kavinabregana-2.png" alt="image of kavin" />
+                </figure>
               </div>
 
               <div class="about__content">
                 <h3 class="tertiary-heading">I'm Kavin</h3>
 
                 <p class="about__paragraph">
-                  These materials are simply being used for exhibition. Soon, there will be actual content posted. These materials are simply being used for exhibition. Soon, there will be actual content posted.
+                  These materials are simply being used for exhibition. Soon,
+                  there will be actual content posted. These materials are
+                  simply being used for exhibition. Soon, there will be actual
+                  content posted.
                 </p>
               </div>
 
               <div class="about__additional_info">
-
                 <h3 class="tertiary-heading">Skills</h3>
                 <p class="paragraph">
-                  These materials are simply being used for exhibition. Soon, there will be actual content posted. These materials are simply being used for exhibition. Soon, there will be actual content posted.
+                  These materials are simply being used for exhibition. Soon,
+                  there will be actual content posted. These materials are
+                  simply being used for exhibition. Soon, there will be actual
+                  content posted.
                 </p>
               </div>
 
@@ -178,24 +225,26 @@
                 <li class="about__item">jQuery</li>
                 <li class="about__item">Javascript</li>
                 <li class="about__item">WordPress</li>
-                <li class="about__item">And extending my skill set going forward</li>
+                <li class="about__item">
+                  And extending my skill set going forward
+                </li>
               </ul>
             </div>
-
-
           </article>
           <article id="my-work" class="right_slide__content right_slide__content--3" >
-
             <aside class="work">
               <div class="work__container">
-
                 <div class="work__section work__section--box1">
                   <div class="work__heading">
-                    <h3 class="tertiary-heading"> Dummy Website </h3>
+                    <h3 class="tertiary-heading">Dummy Website</h3>
                   </div>
                   <div class="work__image">
                     <figure class="work__figure">
-                      <img class="work__img" src="images/dummywebsite.jpg" alt="sample dummy website">
+                      <img
+                        class="work__img"
+                        src="images/dummywebsite.jpg"
+                        alt="sample dummy website"
+                      />
                     </figure>
                   </div>
                   <div class="work__information">
@@ -210,16 +259,22 @@
 
                 <div class="work__section work__section--box2">
                   <div class="work__heading">
-                    <h3 class="tertiary-heading"> Dummy Website </h3>
+                    <h3 class="tertiary-heading">Dummy Website</h3>
                   </div>
                   <div class="work__image">
                     <figure class="work__figure">
-                      <img class="work__img" src="images/dummywebsite.jpg" alt="sample dummy website">
+                      <img
+                        class="work__img"
+                        src="images/dummywebsite.jpg"
+                        alt="sample dummy website"
+                      />
                     </figure>
                   </div>
                   <div class="work__information">
                     <ul class="work__list">
-                      <li class="work__item"><strong>WordPress Elementor</strong></li>
+                      <li class="work__item">
+                        <strong>WordPress Elementor</strong>
+                      </li>
                       <li class="work__item">Sample Description</li>
                       <li class="work__item">Sample Description</li>
                       <li class="work__item">Sample Description</li>
@@ -229,26 +284,30 @@
 
                 <div class="work__section work__section--box3">
                   <div class="work__heading">
-                    <h3 class="tertiary-heading"> Dummy Website </h3>
+                    <h3 class="tertiary-heading">Dummy Website</h3>
                   </div>
                   <div class="work__image">
                     <figure class="work__figure">
-                      <img class="work__img" src="images/dummywebsite.jpg" alt="sample dummy website">
+                      <img
+                        class="work__img"
+                        src="images/dummywebsite.jpg"
+                        alt="sample dummy website"
+                      />
                     </figure>
                   </div>
                   <div class="work__information">
                     <ul class="work__list">
-                      <li class="work__item"><strong>WordPress Divi</strong></li>
+                      <li class="work__item">
+                        <strong>WordPress Divi</strong>
+                      </li>
                       <li class="work__item">Sample Description</li>
                       <li class="work__item">Sample Description</li>
                       <li class="work__item">Sample Description</li>
                     </ul>
                   </div>
                 </div>
-
               </div>
             </aside>
-
           </article>
 
           <!-- blog -->
@@ -304,9 +363,10 @@
 
                     <div class="blog__content">
                       <h2 class="blog__heading">
-                        Learning while working? Come join me and explore things in web.
+                        Learning while working? Come join me and explore things
+                        in web.
                       </h2>
-                      <p class="blog__paragraph">
+                      <p class="blog__pamiddle-swapping-mobileragraph">
                         Come and explore with me on how important to keep tabs
                         on new trends in today's technology.
                         <a class="blog__link" href="javascript:;"
@@ -318,19 +378,113 @@
                 </div>
               </div>
 
-              <a href="javascript:;" class="buttons">View All Blog Posts <span>→</span></a>
-
+              <a href="javascript:;" class="buttons"
+                >View All Blog Posts <span>→</span></a
+              >
             </aside>
           </article>
         </div>
         <div class="action_buttons">
-          <button class="action_buttons--down_button">
-          </button>
-          <button class="action_buttons--up_button">
-          </button>
+          <button class="action_buttons--down_button"></button>
+          <button class="action_buttons--up_button"></button>
         </div>
-      </div>
+      </article>
       <!-- for dual slider -->
+
+      <section class="banner-section">
+        <div class="wrapper">
+          <div class="banner__container">
+            <div class="banner__information">
+              <!-- banner info here -->
+              <div class="banner-swapping-mobile"></div>
+            </div>
+
+            <div class="banner__image-container">
+              <!-- banner images here -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main class="main-section">
+        <div class="wrapper">
+          <div class="main__container">
+            <article class="main">
+              <!-- main content here -->
+              <div class="main-swapping-mobile"></div>
+            </article>
+          </div>
+        </div>
+      </main>
+
+      <section class="middle-section">
+        <div class="wrapper">
+          <div class="middle__container">
+            <!-- content here -->
+            <div class="middle-swapping-mobile"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bottom-section bottom__section">
+        <div class="wrapper">
+          <div class="bottom__container">
+            <!-- content here -->
+            <div class="bottom-swapping-mobile"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="wrapper">
+          <div class="footer__container">
+            <h3 class="tertiary-heading">Contact Me</h3>
+
+            <div class="contact">
+              <ul class="contact__list">
+                <li class="contact__items">(+63) 976-162-3695</li>
+                <li class="contact__items">
+                  <a class="contact__link" href="mailto:abreganakavin@gmail.com"
+                    >abreganakavin@gmail.com</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="footer__list">
+                <li class="footer__items">
+                  <a
+                    href="https://www.facebook.com/kavin.abregana.31/"
+                    target="_blank"
+                  >
+                    <svg class="footer__icon">
+                      <use
+                        xlink:href="images/icons/sprite.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__items">
+                  <a
+                    href="https://www.linkedin.com/in/kavin-abregana-ba5b33226/"
+                    target="_blank"
+                  >
+                    <svg class="footer__icon">
+                      <use
+                        xlink:href="images/icons/sprite.svg#icon-linkedin-with-circle"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- <p class="footer__copyright">
+                Disclaimer: I solely use the information and ideas I've learned from numerous online courses to exhibit my skills on my site. I must also give my colleagues credit.
+                <span>&copy; Copyright 2023.</span>
+              </p> -->
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- layout container -->
 

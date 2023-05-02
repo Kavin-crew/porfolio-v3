@@ -22,12 +22,19 @@
     color: var(--color-white);
     height: 100%;
     width: 100%;
-    padding: 0 6rem;
+    padding: 0 6rem 0 40%;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+
+    @include respond("1800") {
+      padding: 0 6rem 0 25%;
+    }
+
+    @include respond("1400") {
+      padding: 0 6rem 0 2.5rem;
+    }
   }
 
   &__content--1 {
@@ -74,11 +81,18 @@
   &__content--2 {
     // about me
     position: relative;
+
+    @include respond("1800") {
+      overflow-y: scroll;
+    }
   }
   &__content--3 {
     overflow-y: scroll;
   }
   &__content--4 {
+    @include respond("1800") {
+      overflow-y: scroll;
+    }
   }
 
   &__video {
@@ -166,6 +180,17 @@
   margin: 0 auto;
   transform: translate(-50%, -50%);
 
+  @include respond("1800") {
+    max-width: 80%;
+  }
+
+  @include respond("1024") {
+    max-width: 95%;
+    margin-top: 10rem;
+    position: static;
+    transform: none;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -226,6 +251,9 @@
     text-align: center;
     margin-bottom: 3rem;
     color: var(--color-white);
+    @include respond("1024") {
+      margin-bottom: 5rem;
+    }
   }
 
   .buttons {
@@ -234,6 +262,7 @@
   }
 }
 
+////////////////////////////////////////////////
 // ABOUT
 .about {
   &__container {
@@ -246,6 +275,21 @@
     margin: 0 auto;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    @include respond("1800") {
+      max-width: 80%;
+    }
+
+    @include respond("1024") {
+      max-width: 100%;
+      transform: none;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 5rem;
+
+      position: static;
+    }
   }
   &__images {
     position: relative;
@@ -253,11 +297,19 @@
     width: 100%;
     margin: 0 auto;
     pointer-events: none;
+
+    @include respond("1024") {
+      max-width: 70rem;
+    }
   }
   &__images--1 {
     img {
       width: 100%;
       max-width: 35rem;
+
+      @include respond("1024") {
+        max-width: 38rem;
+      }
     }
   }
 
@@ -326,7 +378,8 @@
   }
 }
 
-//WORK
+/////////////////////////////////////////////////////////////////////////
+//////////WORK
 .work {
   width: 100%;
   max-width: 85%;
@@ -334,10 +387,35 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include respond("1400") {
+    max-width: 89%;
+    left: 53%;
+  }
+
+  @include respond("1024") {
+    max-width: 90%;
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     gap: 0 2rem;
+
+    @include respond("1400") {
+      gap: 0 1rem;
+    }
+
+    @include respond("1024") {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      column-gap: 3.2rem;
+      row-gap: 3.2rem;
+    }
   }
   &__section {
     box-shadow: 1rem 0 13rem rgba(0, 0, 0, 0.02);
@@ -347,6 +425,10 @@
     background: var(--color-white);
     padding: 3rem 1rem;
     border: 1px solid var(--color-gray-4);
+
+    @include respond("1024") {
+      width: 48%;
+    }
   }
 
   &__section:hover &__figure {
@@ -374,6 +456,14 @@
     align-items: center;
     padding-left: 3rem;
     transition: min-height 0.3s linear;
+
+    @include respond("1400") {
+      padding-left: 1rem;
+    }
+    @include respond("1024") {
+      justify-content: center;
+      padding-left: 0;
+    }
   }
 
   &__image {
@@ -381,6 +471,10 @@
     height: 15rem;
     overflow: hidden;
     transition: height 0.3s linear;
+
+    @include respond("1024") {
+      height: 35rem;
+    }
   }
   &__figure {
     position: absolute;
@@ -393,6 +487,9 @@
   }
 
   &__information {
+    @include respond("1400") {
+      font-size: 1.6rem;
+    }
   }
   &__list {
     position: relative;
@@ -400,6 +497,19 @@
   &__item {
     padding-left: 6rem;
     position: relative;
+
+    @include respond("1800") {
+      padding-left: 2rem;
+    }
+
+    @include respond("1400") {
+      padding-left: 1.8rem;
+    }
+
+    @include respond("1024") {
+      font-size: 2.4rem;
+      padding-left: 12rem;
+    }
   }
   &__item::before {
     content: "\f00c";
@@ -409,5 +519,14 @@
     top: 0;
     left: 35px;
     color: var(--color-blue-5);
+
+    @include respond("1800") {
+      left: 0;
+    }
+
+    @include respond("1024") {
+      left: 70px;
+      font-size: 1.8rem;
+    }
   }
 }

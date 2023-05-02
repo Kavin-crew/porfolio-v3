@@ -17,12 +17,24 @@
     position: relative;
   }
 
+  &__icon {
+    fill: var(--color-white);
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 5px;
+    margin-right: 5px;
+  }
+
   &__link:link {
     font-size: 1.8rem;
     color: var(--color-white);
     font-weight: 500;
     line-height: 94px;
     position: relative;
+
+    @include respond("1024") {
+      font-size: 2rem;
+    }
   }
 
   &__list_item::after,

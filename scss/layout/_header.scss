@@ -10,6 +10,9 @@
     position: absolute;
     top: 3rem;
     z-index: 1;
+    @include respond("1024") {
+      top: 3.5rem;
+    }
   }
   &__main_logo_img {
     width: 100%;
