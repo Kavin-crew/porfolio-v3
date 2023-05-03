@@ -19,6 +19,7 @@
 
   &__container {
     @include respond("1024") {
+      padding: 0 2.5rem;
       position: relative;
       display: flex;
       flex-direction: column;

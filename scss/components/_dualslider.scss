@@ -185,7 +185,7 @@
   }
 
   @include respond("1024") {
-    max-width: 95%;
+    max-width: 100%;
     margin-top: 10rem;
     position: static;
     transform: none;
@@ -204,10 +204,20 @@
     justify-content: center;
     align-items: center;
     column-gap: 23px;
+    @include respond("800") {
+      grid-template-rows: min-content 1fr;
+      grid-template-columns: 1fr;
+      row-gap: 2.4rem;
+      text-align: center;
+    }
   }
   &__section {
     background-color: #ffffffc2;
     padding: 2.5rem;
+
+    @include respond("1024") {
+      background-color: var(--color-white);
+    }
   }
   &__content {
   }
@@ -216,10 +226,17 @@
     font-weight: 500;
     line-height: 100%;
     margin-bottom: 2rem;
+
+    @include respond("1024") {
+      font-size: 3rem;
+    }
   }
   &__paragraph {
   }
   &__date {
+    @include respond("1024") {
+      text-align: center;
+    }
   }
   &__month {
     width: 100%;
@@ -233,6 +250,10 @@
     color: var(--color-white);
     background-color: var(--color-blue-1);
     padding: 2rem;
+
+    @include respond("1024") {
+      max-width: 12rem;
+    }
   }
   &__day {
     display: block;
@@ -281,6 +302,7 @@
     }
 
     @include respond("1024") {
+      padding: 0 2.5rem;
       max-width: 100%;
       transform: none;
 
@@ -375,6 +397,9 @@
     padding: 3px 20px;
     border: 2px solid var(--color-blue-1);
     border-radius: 5px;
+    @include respond("600") {
+      padding: 3px 6px;
+    }
   }
 }
 
@@ -394,7 +419,7 @@
   }
 
   @include respond("1024") {
-    max-width: 90%;
+    max-width: 100%;
     position: static;
     transform: none;
     margin: 0 auto;
@@ -428,6 +453,10 @@
 
     @include respond("1024") {
       width: 48%;
+    }
+
+    @include respond("800") {
+      width: 100%;
     }
   }
 
@@ -510,6 +539,10 @@
       font-size: 2.4rem;
       padding-left: 12rem;
     }
+
+    @include respond("600") {
+      padding-left: 9rem;
+    }
   }
   &__item::before {
     content: "\f00c";
@@ -527,6 +560,10 @@
     @include respond("1024") {
       left: 70px;
       font-size: 1.8rem;
+    }
+
+    @include respond("600") {
+      left: 51px;
     }
   }
 }
