@@ -17,5 +17,6 @@
 
   @include respond("1024") {
     position: static;
+    z-index: 0;
   }
 }

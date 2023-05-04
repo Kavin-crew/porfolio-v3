@@ -14,6 +14,53 @@
     <div class="layout_container">
       <!-- layout container -->
 
+      <!-- nav burger -->
+      <section class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#home" class="navigation__link">
+                <svg class="nav__icon">
+                  <use xlink:href="images/icons/sprite.svg#icon-home"></use>
+                </svg>
+                Home</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#about-me" class="navigation__link">
+                <svg class="nav__icon">
+                  <use xlink:href="images/icons/sprite.svg#icon-user"></use>
+                </svg>
+                About Me</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#my-works" class="navigation__link">
+                <svg class="nav__icon">
+                  <use xlink:href="images/icons/sprite.svg#icon-folder"></use>
+                </svg>
+                My Works</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#blog" class="navigation__link">
+                <svg class="nav__icon">
+                  <use xlink:href="images/icons/sprite.svg#icon-message "></use>
+                </svg>
+                Blog</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!-- nav burger -->
+
       <div class="fixed_Nav">
         <!-- for fixed_Nav -->
 
@@ -29,7 +76,7 @@
           </div>
         </header>
 
-        <section class="section-nav">
+        <section class="section-nav u-none">
           <div class="wrapper">
             <nav class="nav">
               <ul class="nav__list">
@@ -74,6 +121,7 @@
           </div>
         </section>
       </div>
+
       <!-- for fixed_Nav -->
 
       <!-- for dual slider -->
@@ -136,7 +184,9 @@
               <p class="banner__paragraph">
                 Aspiring Front End Developer based out of Cebu
               </p>
-              <a href="javascript:;" class="buttons" >Find Out More <span>&rarr;</span></a >
+              <a href="javascript:;" class="buttons"
+                >Find Out More <span>&rarr;</span></a
+              >
             </div>
             <!-- for swapping to banner -->
           </aside>
@@ -144,7 +194,9 @@
 
         <div class="right_slide">
           <!-- home -->
-          <article id="home" class="right_slide__content right_slide__content--1 active" >
+          <article
+            class="right_slide__content right_slide__content--1 active"
+          >
             <div class="banner__hero u-none">
               <div class="banner__info">
                 <h2 class="secondary-heading">
@@ -185,7 +237,9 @@
           </article>
 
           <!-- about -->
-          <article id="about" class="about right_slide__content right_slide__content--2" >
+          <article
+            class="about right_slide__content right_slide__content--2"
+          >
             <div class="about__container">
               <div class="about__images">
                 <figure class="about__images--1">
@@ -231,7 +285,9 @@
               </ul>
             </div>
           </article>
-          <article id="my-work" class="right_slide__content right_slide__content--3" >
+          <article
+            class="right_slide__content right_slide__content--3"
+          >
             <aside class="work">
               <div class="work__container">
                 <div class="work__section work__section--box1">
@@ -312,7 +368,6 @@
 
           <!-- blog -->
           <article
-            id="blog"
             class="right_slide__content right_slide__content--4"
           >
             <div class="right_slide__video">
@@ -391,7 +446,7 @@
       </article>
       <!-- for dual slider -->
 
-      <section class="banner-section">
+      <section id="home" class="banner-section">
         <div class="wrapper">
           <div class="banner__container">
             <div class="banner__information">
@@ -406,7 +461,7 @@
         </div>
       </section>
 
-      <main class="main-section">
+      <main id="about-me" class="main-section">
         <div class="wrapper">
           <div class="main__container">
             <article class="main">
@@ -417,7 +472,7 @@
         </div>
       </main>
 
-      <section class="middle-section">
+      <section id="my-works" class="middle-section">
         <div class="wrapper">
           <div class="middle__container">
             <!-- content here -->
@@ -426,9 +481,9 @@
         </div>
       </section>
 
-      <section class="bottom-section bottom__section">
+      <section id="blog" class="bottom-section bottom__section">
         <div class="wrapper">
-          <div class="bottom__container">
+          <div class="bottom__container" >
             <!-- content here -->
             <div class="bottom-swapping-mobile"></div>
           </div>

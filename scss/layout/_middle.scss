@@ -1,6 +1,10 @@
 //============
 // Middle area
 //============
+#my-works{
+  scroll-margin-top: 10rem;
+}
+
 .middle-section {
   @extend .section-display-none;
   @include respond("1024") {

@@ -23,9 +23,15 @@
     height: 1.5rem;
     top: 5px;
     margin-right: 5px;
+
+    @include respond("1024"){
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 
-  &__link:link {
+  &__link:link,
+  &__link:visited {
     font-size: 1.8rem;
     color: var(--color-white);
     font-weight: 500;

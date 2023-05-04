@@ -29,7 +29,6 @@ $(document).ready(function () {
       $(".work").insertAfter(".middle__content");
       $(".about__container").insertBefore(".main__content");
       $(".banner__image-container").append($(".banner__hero"));
-
     } else {
       // for left side
       $(".bottom__content").insertAfter(".bottom-swapping-desktop");
@@ -136,4 +135,38 @@ $(document).ready(function () {
       activeSlideIndex * sliderHeight
     }px)`;
   };
+
+  // for burger
+  // for overflow upon active of navigation mobile
+  const htmlEl = document.querySelector("html");
+  const bodyEl = document.querySelector("body");
+
+  //for scrolling a:link for every section and works with safari
+  const allLinks = document.querySelectorAll("a:link");
+  
+  // console.log(allLinks);
+  allLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const href = link.getAttribute("href");
+
+      // smooth scrolling to top
+      if (href === "#") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+      // scroll to other link
+      if (href !== "#" && href.startsWith("#")) {
+        const sectionEl = document.querySelector(href);
+        sectionEl.scrollIntoView({ behavior: "smooth" });
+      }
+      // close mobile navigation
+      if ($(".navigation__checkbox").is(":checked"))
+        $("input[type=checkbox]").trigger("click");
+    });
+  });
+  // for burger
 });
