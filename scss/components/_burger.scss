@@ -43,6 +43,8 @@
     top: 0;
     left: 0;
     z-index: 1500;
+    // visibility: hidden;
+    pointer-events: none;
 
     opacity: 0;
     width: 0;

@@ -143,7 +143,14 @@ $(document).ready(function () {
 
   //for scrolling a:link for every section and works with safari
   const allLinks = document.querySelectorAll("a:link");
-  
+
+  $(".navigation__checkbox").change(function () {
+    if (this.checked) {
+      $(".navigation__nav").css("visibility", "visible");
+      $(".navigation__nav").css("pointer-events", "all");
+    }
+  });
+
   // console.log(allLinks);
   allLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -164,8 +171,11 @@ $(document).ready(function () {
         sectionEl.scrollIntoView({ behavior: "smooth" });
       }
       // close mobile navigation
-      if ($(".navigation__checkbox").is(":checked"))
+      if ($(".navigation__checkbox").is(":checked")) {
         $("input[type=checkbox]").trigger("click");
+        $(".navigation__nav").css("visibility", "hidden");
+        $(".navigation__nav").css("pointer-events", "none");
+      }
     });
   });
   // for burger
