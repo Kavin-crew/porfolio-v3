@@ -142,7 +142,7 @@ $(document).ready(function () {
   const bodyEl = document.querySelector("body");
 
   //for scrolling a:link for every section and works with safari
-  const allLinks = document.querySelectorAll("a:link");
+  const allLinks = document.querySelectorAll(".navigation__link");
 
   $(".navigation__checkbox").change(function () {
     if (this.checked) {
