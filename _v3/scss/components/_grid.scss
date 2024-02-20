@@ -1,0 +1,23 @@
+//============
+// Grid
+//============
+
+.layout_container {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns:
+    [full-start] minmax(25px, 1fr) [center-start] repeat(
+      12,
+      minmax(min-content, 114.5833px)
+    )
+    [center-end] minmax(25px, 1fr) [full-end];
+
+  @include respond("1024") {
+    grid-template-rows: 94px repeat(4, min-content) 44px;
+    grid-template-columns: [full-start] 25px [center-start] repeat(12, 1fr) [center-end] 25px [full-end];
+  }
+
+  @include respond("800") {
+    grid-template-rows: 94px repeat(4, min-content) 200px;
+  }
+}

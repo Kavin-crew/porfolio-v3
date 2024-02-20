@@ -1,0 +1,94 @@
+//============
+// Typography
+//============
+
+/* 
+--WHITESPACE
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
+--TYPOGRAPHY
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+h1 4.4
+h2 3.6
+h3 3
+
+subheading   2.4
+default text 1.8
+
+font-weight: 400
+Medium:      500
+Semi-Bold:   600
+Bold:        700
+
+--SHADOWS
+box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+
+box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+--BORDER RADIUS
+9px
+11px
+*/
+
+.primary-heading {
+  font-size: 3.6rem;
+  line-height: 100%;
+  font-weight: bold;
+  color: var(--color-white);
+  margin-bottom: 2rem;
+
+  @include respond("1024") {
+    font-size: 5rem;
+    color: var(--color-blue-1);
+    text-align: center;
+  }
+}
+.primary-heading-small {
+  display: block;
+  font-family: var(--font-primary);
+  font-weight: normal;
+  color: var(--color-primary);
+  font-size: 2rem;
+  line-height: 100%;
+  margin-bottom: 1.3rem;
+  text-transform: initial;
+}
+.primary-heading span {
+  display: block;
+  line-height: 100%;
+  margin: 0.5rem 0;
+  @include respond("1024") {
+    display: inline-block;
+  }
+
+}
+
+.tertiary-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 100%;
+  @include respond("1024") {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.secondary-heading {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 100%;
+  color: var(--color-white);
+
+  small {
+    display: block;
+    line-height: 100%;
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: 7px;
+    text-transform: initial;
+    font-weight: normal;
+  }
+}

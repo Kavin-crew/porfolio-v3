@@ -1,0 +1,71 @@
+//============
+// Middle area
+//============
+#my-works{
+  scroll-margin-top: 10rem;
+}
+
+.middle-section {
+  @extend .section-display-none;
+  @include respond("1024") {
+    grid-row: 4 / 5;
+    grid-column: full-start / full-end;
+    padding: 0 0 10rem;
+  }
+}
+
+.middle-swapping-mobile {
+  position: absolute;
+}
+
+.middle {
+  @extend .section-padding;
+
+  &__container {
+    @include respond("1024") {
+      padding: 0 2.5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      row-gap: 6rem;
+    }
+  }
+
+  &__content {
+    @include respond("1024") {
+      text-align: center;
+    }
+  }
+
+  // boxes
+  &__boxes {
+  }
+
+  &__box {
+  }
+
+  &__box:hover {
+  }
+
+  &__heading,
+  &__heading_span {
+    &__box figure {
+      width: 35%;
+    }
+
+    &__box img {
+    }
+
+    &__box--even {
+    }
+
+    &__box--even figure {
+    }
+
+    &__inner_text {
+    }
+
+    &__button {
+    }
+  }
+}
